@@ -14,6 +14,7 @@ app = Flask(__name__)
 app.secret_key = 'armin'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['PROPAGATE_EXCEPTIONS'] = True
 db.init_app(app)
 api = Api(app)
 
